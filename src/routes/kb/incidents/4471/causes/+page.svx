@@ -1,0 +1,33 @@
+---
+layout: runbook
+title: '#4471 · two date-entry causes'
+owner: support desk
+status: proposed
+reviewed: 2026-11-02
+signature: rishdor
+---
+
+<script>
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+Ticket #4471 was marked known as one date bug. The export contains **412 unique reports**; its 427 rows include 15 duplicate rows. Tenant locale, form version, and channel separate the reports into two causes. Intake tags are guesses, not the cause of record.
+
+## What the export shows
+
+<CauseTable ticket={4471} />
+
+## Split the work
+
+- **Shared parser — 379 reports.** Eleven day-first tenants use the shared parser, which reads dates month-first. This group includes app, email, and `booking-v2` form reports. Example: R-41200 says a 7 April reminder went out on 4 July.
+- **`booking-v3` hint — 33 reports.** Three day-first tenants use a form that displays `MM/DD/YYYY`. Its hint conflicts with their configured date order. Example: R-41241 describes June 8 being taken as August 6.
+
+These are separate problems and need separate tickets. The five reports listed in `desk-notes.json` as apparent one-day moves remain counted under the export's tenant/form rules; review them as exceptions rather than silently assigning them a new cause.
+
+## Proposed tickets
+
+1. `#4471: split out day-first parser bug (379 reports)`
+2. `#4471: align booking-v3 date hint with day-first tenants (33 reports)`
+
+<RenderStamp {signature} />
