@@ -16,7 +16,7 @@ Ticket #4471 was marked known as one date bug. The export contains **412 unique 
 
 ## What the export shows
 
-<CauseTable ticket={4471} />
+<CauseTable ticket={4471} issueUrls={{ parser: 'https://github.com/rishdor/what-it-shows/issues/1', hint: 'https://github.com/rishdor/what-it-shows/issues/2' }} />
 
 ## Split the work
 
@@ -25,9 +25,9 @@ Ticket #4471 was marked known as one date bug. The export contains **412 unique 
 
 These are separate problems and need separate tickets. The five reports listed in `desk-notes.json` as apparent one-day moves remain counted under the export's tenant/form rules; review them as exceptions rather than silently assigning them a new cause.
 
-## Proposed tickets
+## Filed tickets
 
-1. `#4471: split out day-first parser bug (379 reports)`
-2. `#4471: align booking-v3 date hint with day-first tenants (33 reports)`
+1. [#1 — split out day-first parser bug (379 reports)](https://github.com/rishdor/what-it-shows/issues/1)
+2. [#2 — align booking-v3 date hint with day-first tenants (33 reports)](https://github.com/rishdor/what-it-shows/issues/2)
 
 <RenderStamp {signature} />

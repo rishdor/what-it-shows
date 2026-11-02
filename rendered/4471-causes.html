@@ -37,10 +37,10 @@
       <h2>What the export shows</h2>
       <p class="sum"><strong>412</strong> reports merged into #4471 · <strong>2</strong> causes</p>
       <table>
-        <thead><tr><th>cause</th><th>reports</th><th>tagged as</th><th>tenants</th><th>seen</th><th></th></tr></thead>
+        <thead><tr><th>cause</th><th>reports</th><th>tagged as</th><th>tenants</th><th>seen</th><th>ticket</th></tr></thead>
         <tbody>
-          <tr><td><code>parser</code></td><td>379</td><td class="tags">parser ×356 · hint ×23</td><td>11</td><td>2026-04-01 → 2026-10-04</td><td>#4471</td></tr>
-          <tr class="other"><td><code>hint</code></td><td>33</td><td class="tags">parser ×15 · hint ×18</td><td>3</td><td>2026-04-17 → 2026-09-22</td><td>not this ticket — no ticket of its own</td></tr>
+          <tr><td><code>parser</code></td><td>379</td><td class="tags">parser ×356 · hint ×23</td><td>11</td><td>2026-04-01 → 2026-10-04</td><td><a href="https://github.com/rishdor/what-it-shows/issues/1">GitHub issue #1</a></td></tr>
+          <tr class="other"><td><code>hint</code></td><td>33</td><td class="tags">parser ×15 · hint ×18</td><td>3</td><td>2026-04-17 → 2026-09-22</td><td><a href="https://github.com/rishdor/what-it-shows/issues/2">GitHub issue #2</a></td></tr>
         </tbody>
       </table>
       <p class="note">5 reports read as a one-day move; filed under <code>parser</code> by tenant.</p>
@@ -50,10 +50,10 @@
         <li><strong><code>booking-v3</code> hint — 33 reports.</strong> Three day-first tenants use a form that displays <code>MM/DD/YYYY</code>. Its hint conflicts with their configured date order. Example: R-41241 describes June 8 being taken as August 6.</li>
       </ul>
       <p>These are separate problems and need separate tickets. The five reports listed in <code>desk-notes.json</code> as apparent one-day moves remain counted under the export's tenant/form rules; review them as exceptions rather than silently assigning them a new cause.</p>
-      <h2>Proposed tickets</h2>
+      <h2>Filed tickets</h2>
       <ol>
-        <li><code>#4471: split out day-first parser bug (379 reports)</code></li>
-        <li><code>#4471: align booking-v3 date hint with day-first tenants (33 reports)</code></li>
+        <li><a href="https://github.com/rishdor/what-it-shows/issues/1">#1 — split out day-first parser bug (379 reports)</a></li>
+        <li><a href="https://github.com/rishdor/what-it-shows/issues/2">#2 — align booking-v3 date hint with day-first tenants (33 reports)</a></li>
       </ol>
       <p class="stamp">desk ref <b>DR-DP95-7R5C</b></p>
     </main>
