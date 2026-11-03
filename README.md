@@ -27,6 +27,22 @@ src/lib/data/       exports from the ticket system
 - A decision is never edited after it is accepted. A new record replaces it.
 - A page you add is signed: its frontmatter carries your `signature` and it ends with `<RenderStamp {signature} />`, so the desk knows who wrote it.
 
+## Render and inspect the kb
+
+This export includes the SvelteKit and mdsvex setup used to render the `.svx` pages and their
+components. From this directory, install the development dependencies once, then start the
+local site:
+
+```sh
+npm install
+npm run dev
+```
+
+Open `http://localhost:5173/kb` to browse the rendered pages. In particular, inspect
+`http://localhost:5173/kb/incidents/4471/causes` before relying on the cause counts. Run
+`npm run check` for Svelte and TypeScript diagnostics and `npm run build` to generate the
+prerendered site in `build/`. Run `npm run preview` after the build to inspect that static output.
+
 ## Owners
 
 Support desk. Decision records: whoever signed them.
